@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Android/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CustomProgressBar/App.cs">
     <Files>
       <File FileName="Android/MainActivity.cs" Line="16" Column="48" />
       <File FileName="CustomProgressBar/CustomControls/CircularProgress.cs" Line="14" Column="3" />
       <File FileName="CustomProgressBar/App.cs" Line="49" Column="38" />
-      <File FileName="Android/Renderers/CircularProgressRenderer.cs" Line="65" Column="4" />
+      <File FileName="Android/Renderers/CircularProgressRenderer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

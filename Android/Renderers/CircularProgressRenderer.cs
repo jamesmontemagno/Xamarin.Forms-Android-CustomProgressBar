@@ -8,7 +8,7 @@ using CustomProgressBar.CustomControls;
 [assembly:ExportRenderer(typeof(CircularProgress), typeof(CircularProgressRenderer))]
 namespace CustomProgressBar.Droid.Renderers
 {
-	public class CircularProgressRenderer : NativeRenderer
+	public class CircularProgressRenderer : ViewRenderer
 	{
 
 		HoloCircularProgressBar progress;
@@ -16,50 +16,50 @@ namespace CustomProgressBar.Droid.Renderers
 		{
 		}
 
-		protected override void OnModelChanged (VisualElement oldModel, VisualElement newModel)
+		protected override void OnElementChanged (ElementChangedEventArgs<View> e)
 		{
-			base.OnModelChanged (oldModel, newModel);
-
-			var model = this.Model as CircularProgress;
-			if (model == null)
+			base.OnElementChanged (e);
+			var element = this.Element as CircularProgress;
+			if (element == null)
 				return;
 
 			progress = new HoloCircularProgressBar (Forms.Context) {
-				Max = model.Max,
-				Progress = model.Progress,
-				Indeterminate = model.Indeterminate,
-				ProgressColor = model.ProgressColor.ToAndroid(),
-				ProgressBackgroundColor = model.ProgressBackgroundColor.ToAndroid(),
-				IndeterminateInterval = model.IndeterminateSpeed
+				Max = element.Max,
+				Progress = element.Progress,
+				Indeterminate = element.Indeterminate,
+				ProgressColor = element.ProgressColor.ToAndroid (),
+				ProgressBackgroundColor = element.ProgressBackgroundColor.ToAndroid (),
+				IndeterminateInterval = element.IndeterminateSpeed
 			};
 
 
 			SetNativeControl (progress);
 		}
 
-		protected override void OnHandlePropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
+
+		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
-			base.OnHandlePropertyChanged (sender, e);
+			base.OnElementPropertyChanged (sender, e);
 
 			if (progress == null)
 				return;
 
-			var model = this.Model as CircularProgress;
-			if (model == null)
+			var element = this.Element as CircularProgress;
+			if (element == null)
 				return;
 
 			if (e.PropertyName == CircularProgress.MaxProperty.PropertyName) {
-				progress.Max = model.Max;
+				progress.Max = element.Max;
 			} else if (e.PropertyName == CircularProgress.ProgressProperty.PropertyName) {
-				progress.Progress = model.Progress;
+				progress.Progress = element.Progress;
 			} else if (e.PropertyName == CircularProgress.IndeterminateProperty.PropertyName) {
-				progress.Indeterminate = model.Indeterminate;
+				progress.Indeterminate = element.Indeterminate;
 			}else if (e.PropertyName == CircularProgress.ProgressBackgroundColorProperty.PropertyName) {
-				progress.ProgressBackgroundColor = model.ProgressBackgroundColor.ToAndroid ();
+				progress.ProgressBackgroundColor = element.ProgressBackgroundColor.ToAndroid ();
 			}else if (e.PropertyName == CircularProgress.ProgressColorProperty.PropertyName) {
-				progress.ProgressColor = model.ProgressColor.ToAndroid ();
+				progress.ProgressColor = element.ProgressColor.ToAndroid ();
 			}else if (e.PropertyName == CircularProgress.IndeterminateSpeedProperty.PropertyName) {
-				progress.IndeterminateInterval = model.IndeterminateSpeed;
+				progress.IndeterminateInterval = element.IndeterminateSpeed;
 			}
 
 		}
