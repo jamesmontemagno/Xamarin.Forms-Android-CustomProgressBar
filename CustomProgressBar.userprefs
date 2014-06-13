@@ -1,16 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CustomProgressBar/App.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Android/Renderers/CircularProgressRenderer.cs">
     <Files>
-      <File FileName="Android/MainActivity.cs" Line="16" Column="48" />
-      <File FileName="CustomProgressBar/CustomControls/CircularProgress.cs" Line="14" Column="3" />
-      <File FileName="CustomProgressBar/App.cs" Line="49" Column="38" />
-      <File FileName="Android/Renderers/CircularProgressRenderer.cs" Line="1" Column="1" />
+      <File FileName="Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="CustomProgressBar/CustomControls/CircularProgress.cs" Line="64" Column="20" />
+      <File FileName="CustomProgressBar/App.cs" Line="1" Column="1" />
+      <File FileName="Android/Renderers/CircularProgressRenderer.cs" Line="23" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CustomProgressBar.Anroid AndroidDeviceId-Debug="T062005D5Z" />
+  <MonoDevelop.Ide.ItemProperties.CustomProgressBar.Anroid AndroidDeviceId-Debug="emulator-5554" />
 </Properties>
