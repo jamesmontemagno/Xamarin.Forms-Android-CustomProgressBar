@@ -10,8 +10,10 @@ namespace CustomProgressBar
 		{	
 		
 			var contentPage = new ContentPage {
-				Title = "Custom Progress Bar"
+				//Title = "Custom Progress Bar"
+
 			};
+		
 			var progressBar = new CircularProgress {
 				ProgressColor = Color.FromHex("3498DB"),
 				ProgressBackgroundColor = Color.FromHex("B4BCBC"),
@@ -52,7 +54,8 @@ namespace CustomProgressBar
 
 			contentPage.Content = mainStack;
 
-			return new NavigationPage (contentPage);
+			return contentPage;
+			//return new NavigationPage (contentPage);
 		}
 	}
 }

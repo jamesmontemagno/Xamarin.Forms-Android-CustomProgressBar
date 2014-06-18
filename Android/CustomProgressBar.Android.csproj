@@ -57,6 +57,7 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.1.0.6201\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -75,10 +76,15 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
-  <Import Project="..\CustomProgressBar\CustomProgressBar.projitems" Label="Shared" Condition="Exists('..\CustomProgressBar\CustomProgressBar.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="../packages/Xamarin.Forms.1.1.0.6201/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
   <ItemGroup>
     <Folder Include="Renderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomProgressBar.Portable\CustomProgressBar.Portable.csproj">
+      <Project>{BCBDC8BF-157E-450D-8B1E-4CBF49A81EDA}</Project>
+      <Name>CustomProgressBar.Portable</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
