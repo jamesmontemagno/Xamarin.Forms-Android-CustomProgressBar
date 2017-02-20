@@ -4,8 +4,12 @@ using CustomProgressBar.CustomControls;
 
 namespace CustomProgressBar
 {
-	public class App
+	public class App : Xamarin.Forms.Application
 	{
+        public App()
+        {
+            MainPage = GetMainPage();
+        }
 		public static Page GetMainPage ()
 		{	
 		

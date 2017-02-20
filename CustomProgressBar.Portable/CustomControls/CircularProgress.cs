@@ -9,11 +9,14 @@ namespace CustomProgressBar.CustomControls
 		{
 
 		}
+        
 
-
-		public static readonly BindableProperty IndeterminateProperty = 
-			BindableProperty.Create<CircularProgress,bool> (
-				p => p.Indeterminate, default(bool));
+        public static readonly BindableProperty IndeterminateProperty = 
+			BindableProperty.Create(
+				nameof(Indeterminate),
+                typeof(bool),
+                typeof(CircularProgress),
+                default(bool));
 
 		public bool Indeterminate {
 			get { return (bool)GetValue (IndeterminateProperty); }
@@ -22,21 +25,25 @@ namespace CustomProgressBar.CustomControls
 
 
 		public static readonly BindableProperty ProgressProperty = 
-			BindableProperty.Create<CircularProgress,float> (
-				p => p.Progress, 0);
+			BindableProperty.Create(nameof(Progress),
+                typeof(float),
+                typeof(CircularProgress),
+                0);
 
-		/// <summary>
-		/// Gets or sets the current progress
-		/// </summary>
-		/// <value>The progress.</value>
-		public float Progress {
+        /// <summary>
+        /// Gets or sets the current progress
+        /// </summary>
+        /// <value>The progress.</value>
+        public float Progress {
 			get { return (float)GetValue (ProgressProperty); }
 			set { SetValue (ProgressProperty, value); }
 		}
 
 		public static readonly BindableProperty MaxProperty = 
-			BindableProperty.Create<CircularProgress,float> (
-				p => p.Max, 100);
+			BindableProperty.Create(nameof(Max),
+                typeof(float),
+                typeof(CircularProgress),
+                100);
 
 		/// <summary>
 		/// Gets or sets the max value
@@ -49,21 +56,25 @@ namespace CustomProgressBar.CustomControls
 
 
 		public static readonly BindableProperty ProgressBackgroundColorProperty = 
-			BindableProperty.Create<CircularProgress,Color> (
-				p => p.ProgressBackgroundColor, Color.White);
+			BindableProperty.Create(nameof(ProgressBackgroundColor),
+                typeof(Color),
+                typeof(CircularProgress),
+                Color.White);
 
-		/// <summary>
-		/// Gets or sets the ProgressBackgroundColorProperty
-		/// </summary>
-		/// <value>The color of the ProgressBackgroundColorProperty.</value>
-		public Color ProgressBackgroundColor {
+        /// <summary>
+        /// Gets or sets the ProgressBackgroundColorProperty
+        /// </summary>
+        /// <value>The color of the ProgressBackgroundColorProperty.</value>
+        public Color ProgressBackgroundColor {
 			get { return (Color)GetValue (ProgressBackgroundColorProperty); }
 			set { SetValue (ProgressBackgroundColorProperty, value); }
 		}
 
 		public static readonly BindableProperty ProgressColorProperty = 
-			BindableProperty.Create<CircularProgress,Color> (
-				p => p.ProgressColor, Color.Red);
+			BindableProperty.Create(nameof(ProgressColor),
+                typeof(Color),
+                typeof(CircularProgress),
+                Color.Red);
 
 		/// <summary>
 		/// Gets or sets the progress color
@@ -76,10 +87,12 @@ namespace CustomProgressBar.CustomControls
 
 
 		public static readonly BindableProperty IndeterminateSpeedProperty = 
-			BindableProperty.Create<CircularProgress,int> (
-				p => p.IndeterminateSpeed, 100);
+			BindableProperty.Create(nameof(IndeterminateSpeed),
+                typeof(int),
+                typeof(CircularProgress),
+                100);
 
-		public int IndeterminateSpeed {
+        public int IndeterminateSpeed {
 			get { return (int)GetValue (IndeterminateSpeedProperty); }
 			set { SetValue (IndeterminateSpeedProperty, value); }
 		}
