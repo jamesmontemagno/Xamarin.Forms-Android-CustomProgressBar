@@ -28,7 +28,7 @@ namespace CustomProgressBar.CustomControls
 			BindableProperty.Create(nameof(Progress),
                 typeof(float),
                 typeof(CircularProgress),
-                0);
+                0f);
 
         /// <summary>
         /// Gets or sets the current progress
@@ -43,7 +43,7 @@ namespace CustomProgressBar.CustomControls
 			BindableProperty.Create(nameof(Max),
                 typeof(float),
                 typeof(CircularProgress),
-                100);
+                100f);
 
 		/// <summary>
 		/// Gets or sets the max value
